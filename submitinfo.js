@@ -9,7 +9,7 @@ document.getElementById("submitinfo").onclick = function () {
     number = document.querySelector('#number').value;
 
     $.ajax({
-        method: 'POST',
+        method: 'PUT',
         url: 'https://nqyeixuru9.execute-api.us-west-1.amazonaws.com/test' + '/insert',
         data: JSON.dumps({
             "name" : usr,
@@ -21,7 +21,13 @@ document.getElementById("submitinfo").onclick = function () {
             "email" : email,
             "number" : number
         }),
-        contentType: 'application/json'
+        contentType: 'application/json',
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (response) {
+            console.log(response);
+        }
     });
 
 };
