@@ -8,8 +8,6 @@ document.getElementById("submitinfo").onclick = function () {
     email = document.querySelector('#email').value;
     number = document.querySelector('#number').value;
 
-    print(usr)
-
     $.ajax({
         method: 'POST',
         url: 'https://nqyeixuru9.execute-api.us-west-1.amazonaws.com/test' + '/insert',
