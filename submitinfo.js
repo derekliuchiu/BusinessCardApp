@@ -20,11 +20,11 @@ function handle_submit() {
             "name" : usr,
             "age" : age,
             "birthday" : birthday,
-            "job" : job,
+            "job_title" : job,
             "employer" : employer,
             "city" : city,
             "email" : email,
-            "number" : number
+            "phone_number" : number
         }),
         contentType: 'application/json',
         success: function (response) {
