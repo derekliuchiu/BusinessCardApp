@@ -11,11 +11,12 @@ function handle_submit() {
     number = document.querySelector('#number').value;
 
     console.log(usr)
+    alert(usr)
 
     $.ajax({
         method: 'PUT',
         url: 'https://nqyeixuru9.execute-api.us-west-1.amazonaws.com/test' + '/insert',
-        data: JSON.dumps({
+        data: JSON.stringify({
             "name" : usr,
             "age" : age,
             "birthday" : birthday,
