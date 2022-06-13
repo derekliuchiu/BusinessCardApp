@@ -1,4 +1,6 @@
-document.getElementById("submitinfo").onclick = function () {
+$('#submitinfo').submit(handle_submit);
+
+function handle_submit() {
     usr = document.querySelector('#name').value;
     age = document.querySelector('#age').value;
     birthday = document.querySelector('#birthday').value;
@@ -7,6 +9,8 @@ document.getElementById("submitinfo").onclick = function () {
     city = document.querySelector('#city').value;
     email = document.querySelector('#email').value;
     number = document.querySelector('#number').value;
+
+    console.log(usr)
 
     $.ajax({
         method: 'PUT',
